@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.2.96",
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.16.19",
+    "nuxt": "^3.6.3",
+    "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "@directus/sdk": "^10.3.5",
+    "@pinia/nuxt": "^0.4.11",
+    "moment": "^2.29.4",
+    "pinia": "^2.1.4",
+    "shopify-buy": "^2.20.0",
+    "swiper": "^10.0.4",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify": "^3.3.9"
+  }
+}

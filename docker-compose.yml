@@ -1,0 +1,33 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:10.4.3
+    ports:
+      - 8055:8055
+    volumes:
+      # If you want to load extensions from the host
+      - ./directus/database:/directus/database
+      - ./directus/uploads:/directus/uploads
+      - ./directus/extensions:/directus/extensions
+    networks:
+      - directus
+    environment:
+      KEY: 'DACDA33F-006B-46FB-B472-8CA3879E440E'
+      SECRET: 'D57A2576-20F3-4E34-B7B7-F0E973E725DC'
+
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/directus/database/data.db'
+
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'change,me'
+
+      TELEMETRY: 'false'
+      
+      WEBSOCKETS_ENABLED: true
+
+      CORS_ENABLED: 'true'
+      CORS_ORIGIN: 'http://localhost:3000'
+
+networks:
+  directus:
+    driver: bridge
